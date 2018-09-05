@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../models/product';
 import { ProductService } from '../../services/product.service';
+import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -14,12 +15,13 @@ export class ProductDetailComponent implements OnInit {
   public product: Product = new Product();
 
   constructor(private route: ActivatedRoute,
-              private service: ProductService
   ) { }
 
   ngOnInit() {
-    this.service.getProduct(this.route.snapshot.paramMap.get('id'))
+    this.route.data
+      .pipe(
+        map(data => data['product'])
+      )
       .subscribe(res => this.product = res);
   }
-
 }
