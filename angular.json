@@ -24,8 +24,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/manifest.json"
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"
@@ -48,8 +47,7 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
-              "serviceWorker": true
+              "buildOptimizer": true
             }
           }
         },
@@ -83,8 +81,7 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/manifest.json"
+              "src/assets"
             ]
           }
         },
@@ -129,11 +126,6 @@
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
             "devServerTarget": "store:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "store:serve:production"
-            }
           }
         },
         "lint": {
@@ -150,9 +142,11 @@
   },
   "defaultProject": "store",
   "schematics": {
-    "@schematics/angular/component": {
-      "inlineStyle": true,
-      "inlineTemplate": true
+    "@schematics/angular": {
+      "component": {
+        "inlineStyle": true,
+        "inlineTemplate": true
+      }
     }
   }
 }
