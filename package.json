@@ -7,7 +7,14 @@
     "build": "ng build store --prod && ng run store:server:production",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "now": "now deploy && now alias"
+  },
+  "now": {
+    "name": "nicholasmurray-store",
+    "alias": [
+      "nicholasmurray-store.now.sh"
+    ]
   },
   "private": true,
   "dependencies": {
