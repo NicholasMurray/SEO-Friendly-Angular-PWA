@@ -8,8 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Deployment server
 
-Run `npm run now` to deploy to now.sh
-Location `https://nicholasmurray-store-qiwjhvryzz.now.sh`
+Run `npm run build && npm run now` to build deploy to now.sh
 Alias `https://nicholasmurray-store.now.sh`
 
 ## Code scaffolding
